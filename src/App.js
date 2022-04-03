@@ -9,6 +9,7 @@ import {
   useParams
 } from "react-router-dom";
 import Home from './Pages/Home/Home/Home';
+import Appoinment from './Pages/Appoinment/Appoinment/Appoinment';
 
 
 
@@ -18,14 +19,15 @@ function App() {
 
      <Router>
      <Switch>
+       
+     <Route path="/appoinment">
+           <Appoinment />
+          </Route>
 
           <Route path="/">
              <Home />
             </Route>
 
-          <Route path="/home">
-           <Home />
-          </Route>
           
         </Switch>
      </Router>
