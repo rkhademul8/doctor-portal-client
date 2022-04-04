@@ -29,6 +29,7 @@ const Navigation = () => {
           <Link to="/home">Home</Link>
           <Link to="/appoinment">Appoinments</Link>
           <Link to="/login">Login</Link>
+          <Link to="/register">Register</Link>
 
         </Toolbar>
       </AppBar>
