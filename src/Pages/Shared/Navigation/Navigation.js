@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 const Navigation = () => {
     return (
         
-            <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
           <IconButton
@@ -26,9 +26,10 @@ const Navigation = () => {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Doctor Portal
           </Typography>
-          
+          <Link to="/home">Home</Link>
           <Link to="/appoinment">Appoinments</Link>
-          <Button color="inherit">Login</Button>
+          <Link to="/login">Login</Link>
+
         </Toolbar>
       </AppBar>
     </Box>
