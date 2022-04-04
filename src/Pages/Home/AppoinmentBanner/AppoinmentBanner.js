@@ -21,10 +21,10 @@ const AppoinmentBanner = () => {
           <Grid item xs={12} md={6}>
             <img style={{width:'400px', marginTop:'-110px'}} src={doctor} alt="" />
           </Grid>
+
           <Grid item xs={12} md={6} sx={{display:'flex',justifyContent: 'flex-start' ,
           alignItems:'center',
-          textAlign:'left'
-        }}>
+          textAlign:'left' }}>
             
             <Box >
             <Typography variant='h6' sx={{mb:3}} style={{color:'#5CE7ED'}}>
