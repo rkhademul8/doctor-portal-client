@@ -12,6 +12,7 @@ import Home from './Pages/Home/Home/Home';
 import Appoinment from './Pages/Appoinment/Appoinment/Appoinment';
 import Login from './Pages/Login/Login/Login';
 import Register from './Pages/Login/Register/Register';
+import AuthProvider from './Context/AuthProvider/AuthProvider';
 
 
 
@@ -19,7 +20,9 @@ function App() {
   return (
     <div className="App">
 
-     <Router>
+    <AuthProvider>
+
+    <Router>
      <Switch>
      <Route exact path="/">
              <Home />
@@ -47,6 +50,8 @@ function App() {
         </Switch>
      </Router>
 
+
+    </AuthProvider>
     </div>
   );
 }

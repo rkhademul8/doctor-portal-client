@@ -1,12 +1,15 @@
-import { Button, Container, Grid, TextField, Typography } from '@mui/material';
+import { Alert, Button, CircularProgress, Container, Grid, TextField, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import useAuth from '../../../hooks/useAuth';
 import login from '../../../images/login.png'
 
 const Login = () => {
 
     const [loginData, setLoginData]=useState({})
+
+    const {user,isLoading,authError,loginUser}=useAuth()
 
     const handleOnChange=e=>{
         const field=e.target.name
@@ -17,7 +20,8 @@ const Login = () => {
     }
 
     const handleLoginSubmit=e=>{
-        alert('Hello')
+
+        loginUser(loginData.email, loginData.password)
         e.preventDefault()
     }
 
@@ -29,7 +33,7 @@ const Login = () => {
                <Box>
                <Typography variant='body1'>Login</Typography>
 
-                <form onSubmit={handleLoginSubmit}>
+              { !isLoading &&  <form onSubmit={handleLoginSubmit}>
 
                     <TextField sx={{width:'90%'}}
                     id="standard-search"
@@ -51,7 +55,13 @@ const Login = () => {
                     <Button type='submit' variant='contained'>Login</Button>
                     <br />
                 <Link to={'/register'}>New User?? Please Click here for register</Link>
-                </form>
+                </form>}
+
+                {isLoading && <CircularProgress />}
+             {user?.email && <Alert severity="success">Login successfully</Alert>}
+
+            {authError && <Alert severity="error">{authError}</Alert>}
+
                </Box>
                 
             </Grid>

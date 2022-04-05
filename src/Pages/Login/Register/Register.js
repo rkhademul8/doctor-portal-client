@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
-import { Button, Container, Grid, TextField, Typography } from '@mui/material';
+import { Alert, Button, CircularProgress, Container, Grid, TextField, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import login from '../../../images/login.png'
 import { Link } from 'react-router-dom';
+import useAuth from '../../../hooks/useAuth';
 
 const Register = () => {
    
 
     const [loginData, setLoginData]=useState({})
+
+    const {user,registerUser, isLoading,authError}=useAuth()
 
     const handleOnChange=e=>{
         const field=e.target.name
@@ -19,7 +22,10 @@ const Register = () => {
     }
 
     const handleLoginSubmit=e=>{
-        alert('Hello')
+        if(loginData.password !== loginData.password2){
+            alert('Sorry password not match')
+        }
+        registerUser(loginData.email, loginData.password)
         e.preventDefault()
     }
 
@@ -32,7 +38,7 @@ const Register = () => {
            <Box>
            <Typography variant='body1'>Register</Typography>
 
-            <form onSubmit={handleLoginSubmit}>
+            { !isLoading && <form onSubmit={handleLoginSubmit}>
 
             <TextField sx={{width:'90%'}}
                     id="standard-search"
@@ -61,7 +67,11 @@ const Register = () => {
                     <br />
                 <Button type='submit' variant='contained'>Register</Button> <br />
                 <Link to={'/login'}>Already Register? Please Click here for login</Link>
-            </form>
+            </form>}
+            {isLoading && <CircularProgress />}
+             {user?.email && <Alert severity="success">User Create successfully</Alert>}
+
+            {authError && <Alert severity="error">{authError}</Alert>}
            </Box>
             
         </Grid>
