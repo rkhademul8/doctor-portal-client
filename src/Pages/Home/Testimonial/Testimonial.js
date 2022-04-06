@@ -7,8 +7,13 @@ import people3 from '../../../images/people-3.png'
 
 
 const Testimonial = () => {
+    const service={
+        marginTop:'100px',
+      
+    }
+
     return (
-    <Container sx={{my:10}}>
+    <Container style={service} >
 
         <Grid container spacing={2}>
 

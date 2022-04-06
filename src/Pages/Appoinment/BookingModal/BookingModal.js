@@ -40,7 +40,7 @@ const BookingModal = ({openBooking,handleBookingClose,booking,date,setBookingSuc
         date:date.toLocaleDateString()
         }
 
-        fetch('http://localhost:5000/appoinments',{
+        fetch('https://guarded-dawn-66833.herokuapp.com/appoinments',{
           method:'POST',
           headers:{
             'content-type':'application/json'

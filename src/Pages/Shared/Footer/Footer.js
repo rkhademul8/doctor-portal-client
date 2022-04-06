@@ -1,10 +1,18 @@
 import { Button, Container, Grid, Typography } from '@mui/material';
+import { padding } from '@mui/system';
 import React from 'react';
 
+const service={
+    marginTop:'120px',
+    backgroundColor:'gray',
+    padding:'50px'
+   
+  
+}
 
 const Footer = () => {
     return (
-        <Container sx={{my:10}}>
+        <div style={service} sx={{my:10}}>
           <Grid container spacing={2}>
                 <Grid sx={{textAlign:'left'}} item xs={12} md={3} >
                     <Typography sx={{mt:5}}>Emergency Dental Care</Typography>
@@ -44,7 +52,7 @@ const Footer = () => {
                 
                 
             </Grid>
-        </Container>
+        </div>
     );
 };
 

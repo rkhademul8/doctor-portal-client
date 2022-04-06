@@ -7,10 +7,15 @@ import treatment from '../../../images/treatment.png'
 import { height } from '@mui/system';
 
 const Feature = () => {
+
+    const service={
+        marginTop:'100px',
+      
+    }
+
+
     return (
-
-
-     <Container>
+     <Container style={service}>
         <Box sx={{ flexGrow: 1 }}>
             <Grid container spacing={4}>
                 <Grid item xs={12} md={6}>

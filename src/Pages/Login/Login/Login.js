@@ -6,6 +6,7 @@ import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import login from '../../../images/login.png'
+import Navigation from '../../Shared/Navigation/Navigation';
 
 const Login = () => {
 
@@ -34,7 +35,10 @@ const Login = () => {
     }
 
     return (
-       <Container>
+      <div>
+          <Navigation></Navigation>
+           <Container>
+           
 
             <Grid container spacing={2}>
             <Grid style={{display:'flex',alignItems: 'center'}} item xs={12} md={6}>
@@ -82,6 +86,7 @@ const Login = () => {
             </Grid>
 
        </Container>
+      </div>
     );
 };
 

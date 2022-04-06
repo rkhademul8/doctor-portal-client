@@ -14,8 +14,12 @@ const appoinmentBanner={
 
 
 const AppoinmentBanner = () => {
+  const service={
+    marginTop:'100px',
+  
+}
     return (
-       <Container>
+       <Container style={service}>
             <Box style={appoinmentBanner} sx={{ flexGrow: 1 }}>
         <Grid container spacing={2}>
           <Grid item xs={12} md={6}>

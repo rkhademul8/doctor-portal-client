@@ -15,7 +15,7 @@ import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-
+import './Dashboard.css'
 
 
 import {
@@ -49,6 +49,9 @@ const {admin}=useAuth()
     <div>
       <Toolbar />
       <Divider />
+
+      <Box className='navBar'>
+        
       <Link to="/appoinment">Appoinments</Link> <br />
       <Link to={`${url}`}>Dashboard</Link> <br />
 
@@ -56,10 +59,12 @@ const {admin}=useAuth()
         
         <Link to={`${url}/makeAdmin`}>Make Admin</Link> <br />
         <Link to={`${url}/addDoctor`}>Add Doctor</Link> <br />
-        </Box>}    
+        </Box>}  
+        
+        </Box>  
 
 
-
+{/* 
       <List>
         {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
           <ListItem button key={text}>
@@ -69,7 +74,7 @@ const {admin}=useAuth()
             <ListItemText primary={text} />
           </ListItem>
         ))}
-      </List>
+      </List> */}
       
     </div>
   );

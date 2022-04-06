@@ -45,8 +45,14 @@ const AvailableAppoiment = ({date}) => {
     ] 
 
     const [bookingSuccess, setBookingSuccess]=useState(false)
+    const service={
+        marginTop:'100px',
+      
+    }
+    
+    
     return (
-        <Container>
+        <Container style={service}>
             <Typography variant='h4' sx={{ color: 'info.main', fontWeight:600, mb:4 }}>Available Appoinment on {date.toDateString()}</Typography>
             {bookingSuccess && <Alert severity="success">Booking successfully</Alert>}
             <Grid container spacing={2}>

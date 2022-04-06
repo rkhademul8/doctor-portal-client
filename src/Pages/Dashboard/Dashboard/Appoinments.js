@@ -16,7 +16,7 @@ const Appoinments = ({date}) => {
 
     useEffect(()=>{
 
-        const url=`http://localhost:5000/appoinments?email=${user.email}&date=${date}`
+        const url=`https://guarded-dawn-66833.herokuapp.com/appoinments?email=${user.email}&date=${date}`
         fetch(url,{
           headers:{
             'authorization':`Bearer ${token}`

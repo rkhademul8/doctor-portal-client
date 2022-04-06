@@ -8,7 +8,7 @@ const BannerBg={
     background: `url(${bg})`,
     backgroundColor: 'rgba(45,58,74,0.4)',
     backgroundBlendMode:'darken, luminosity',
-    marginTop:175,
+    marginTop:100,
 }
 
 const Contact = () => {
@@ -41,7 +41,7 @@ const Contact = () => {
         />
         <br />
        
-        <Button variant="contained">Submit</Button>
+        <Button sx={{marginBottom:'20px', marginTop:'20px'}} variant="contained">Submit</Button>
 
             </Box>
         </Container>

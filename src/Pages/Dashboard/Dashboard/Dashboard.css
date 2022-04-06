@@ -1,0 +1,17 @@
+
+
+.navBar{
+    text-align: left;
+    margin-left: 15px;
+    margin-top: 50px;
+}
+
+.navBar a{
+    text-decoration: none;
+    color: gray;
+    font-weight: bold;
+    display: block;
+    margin: 0px;
+    
+  
+}

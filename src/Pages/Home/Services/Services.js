@@ -27,11 +27,15 @@ const services=[
     }
 ]
 
+const service={
+    marginTop:'100px',
+  
+}
 
 
 const Services = () => {
     return (
-        <Box sx={{ flexGrow: 1 }}>
+        <Box style={service} sx={{ flexGrow: 1 }}>
             <Container>
             <Typography sx={{ fontWeight: '500', color:'success.main', m:2 }}  variant="h6" component="div">
                 OUR SERVICES
