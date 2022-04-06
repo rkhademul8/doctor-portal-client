@@ -33,7 +33,12 @@ const Navigation = () => {
           <Link to="/register">Register</Link>
 
           { user?.email ? 
-          <Button onClick={logout} color="inherit">Logout</Button>
+          <Box>
+            <Link to="/dashboard">Dashboard</Link>
+            <Button onClick={logout} color="inherit">Logout</Button>
+
+          </Box>
+          
           :
           <Link to="/login">Login</Link>}
 
